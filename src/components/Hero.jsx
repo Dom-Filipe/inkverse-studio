@@ -3,7 +3,7 @@ function Hero() {
     <section className="hero">
       <div>
         <h1>Inkverse Studio</h1>
-        <p>Arte que transcende a pele</p>
+        <h1>Arte que transcende a pele</h1>
       </div>
     </section>
   );
