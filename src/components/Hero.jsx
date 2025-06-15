@@ -1,13 +1,24 @@
 function Hero() {
   return (
     <section
-      className="hero bg-black text-white flex items-center justify-center min-h-[60vh] md:min-h-screen px-4 bg-no-repeat bg-center bg-contain relative"
-      style={{ backgroundImage: "url('/assets/111.png')" }}
+      className="hero relative flex items-center justify-center px-4 py-16 text-white bg-black"
+      style={{
+        backgroundImage: "url('/assets/111.png')",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        minHeight: "70vh",    // Altura mínima para mobile e notebooks
+        height: "100%",        // Flexível para qualquer tela
+        width: "100%",         // Full width
+      }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="text-center max-w-2xl relative z-10">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Inkverse Studio</h1>
-        <p className="text-lg md:text-2xl">Arte que transcende a pele</p>
+      {/* Camada escura por cima para contraste */}
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+      {/* Conteúdo central */}
+      <div className="relative z-10 text-center max-w-3xl">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4"></h1>
+        <p className="text-lg md:text-2xl"></p>
       </div>
     </section>
   );
