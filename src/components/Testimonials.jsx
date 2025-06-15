@@ -20,6 +20,14 @@
             </p>
             <p className="text-lg">
               Nossa equipe é composta por artistas especializados em diversos estilos, sempre buscando traduzir a identidade de cada cliente em uma obra única.
+
+
+
+
+    
+
+
+    
             </p>
           </div>
         </div>

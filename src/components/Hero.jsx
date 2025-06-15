@@ -13,7 +13,7 @@ function Hero() {
       }}
     >
       {/* Camada escura por cima para contraste */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-0"></div>
 
       {/* Conteúdo central */}
       <div className="relative z-10 text-center max-w-3xl">
