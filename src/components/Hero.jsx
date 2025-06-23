@@ -13,14 +13,15 @@ function Hero() {
         width: "100%",
       }}
     >
-      {/* Camada escura para melhorar contraste */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      {/* Camada escura/gradiente para melhor contraste */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
 
-      {/* Conteúdo com animação */}
+      {/* Conteúdo com animação ao entrar na viewport */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
         className="relative z-10 text-center max-w-3xl"
       >
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
