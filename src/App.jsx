@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -17,8 +18,23 @@ import './index.css';
 function App() {
   return (
     <Router>
+      {/* SEO: Helmet Global */}
+      <Helmet>
+        <title>Inkverse Studio | Estúdio Criativo de Tatuagem e Design</title>
+        <meta
+          name="description"
+          content="Inkverse Studio: Especialistas em design, tatuagem e artes visuais. Veja nossos trabalhos nas categorias Old School, Realismo, Minimalista e Aquarela."
+        />
+        <meta property="og:title" content="Inkverse Studio" />
+        <meta property="og:description" content="Design, tatuagem e criatividade em um só lugar." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      {/* Header visível em todas as páginas */}
       <Header />
+
       <Routes>
+        {/* Página inicial */}
         <Route
           path="/"
           element={
@@ -32,6 +48,8 @@ function App() {
             </>
           }
         />
+
+        {/* Páginas individuais de portfólio */}
         <Route path="/oldschool" element={<OldSchoolPage />} />
         <Route path="/minimalista" element={<MinimalistaPage />} />
         <Route path="/realismo" element={<RealismoPage />} />
@@ -42,4 +60,3 @@ function App() {
 }
 
 export default App;
-
