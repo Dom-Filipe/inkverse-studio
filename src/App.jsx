@@ -7,6 +7,7 @@ import Portfolio from './components/Portfolio';
 import Artists from './components/Artists';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 import OldSchoolPage from './pages/OldSchoolPage';
 import MinimalistaPage from './pages/MinimalistaPage';
@@ -18,7 +19,6 @@ import './index.css';
 function App() {
   return (
     <Router>
-      {/* SEO: Helmet Global */}
       <Helmet>
         <title>Inkverse Studio | Estúdio Criativo de Tatuagem e Design</title>
         <meta
@@ -30,31 +30,36 @@ function App() {
         <meta property="og:type" content="website" />
       </Helmet>
 
-      {/* Header visível em todas as páginas */}
-      <Header />
+      <div className="flex flex-col min-h-screen">
+        {/* Header fixo no topo */}
+        <Header />
 
-      <Routes>
-        {/* Página inicial */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <About />
-              <Portfolio />
-              <Artists />
-              <Testimonials />
-              <Contact />
-            </>
-          }
-        />
+        {/* Conteúdo principal ocupa todo o espaço disponível */}
+        <main className="flex-grow">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <About />
+                  <Portfolio />
+                  <Artists />
+                  <Testimonials />
+                  <Contact />
+                </>
+              }
+            />
+            <Route path="/oldschool" element={<OldSchoolPage />} />
+            <Route path="/minimalista" element={<MinimalistaPage />} />
+            <Route path="/realismo" element={<RealismoPage />} />
+            <Route path="/aquarela" element={<AquarelaPage />} />
+          </Routes>
+        </main>
 
-        {/* Páginas individuais de portfólio */}
-        <Route path="/oldschool" element={<OldSchoolPage />} />
-        <Route path="/minimalista" element={<MinimalistaPage />} />
-        <Route path="/realismo" element={<RealismoPage />} />
-        <Route path="/aquarela" element={<AquarelaPage />} />
-      </Routes>
+        {/* Footer fixo ao final da página */}
+        <Footer />
+      </div>
     </Router>
   );
 }

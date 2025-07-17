@@ -9,7 +9,7 @@ function Hero() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        minHeight: "70vh",
+        minHeight: "100vh",
         width: "100%",
       }}
     >
@@ -25,10 +25,10 @@ function Hero() {
         className="relative z-10 text-center max-w-3xl"
       >
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
-          Bem-vindo ao Inkverse Studio
+          
         </h1>
         <p className="text-lg md:text-2xl">
-          Transformando ideias em arte. Tatuagem, design e criatividade para você se expressar.
+          
         </p>
       </motion.div>
     </section>
