@@ -5,7 +5,7 @@ function Hero() {
     <section
       className="hero relative flex items-center justify-center px-4 py-16 text-white bg-black"
       style={{
-        backgroundImage: "url('/assets/111.png')",
+        backgroundImage: "url('/assets/333.png')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
