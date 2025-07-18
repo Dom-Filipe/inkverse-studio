@@ -1,22 +1,16 @@
 import { motion } from "framer-motion";
 
-function Hero() {
+export default function Hero() {
   return (
-    <section
-      className="hero relative flex items-center justify-center px-4 py-16 text-white bg-black"
-      style={{
-        backgroundImage: "url('/assets/333.png')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        minHeight: "100vh",
-        width: "100%",
-      }}
-    >
-      {/* Camada escura/gradiente para melhor contraste */}
+    <section className="relative flex items-center justify-center px-4 py-16 pt-24 min-h-screen overflow-hidden text-red">
+      <img
+        src="/assets/555.png"
+        alt="Inkverse Studio Background"
+        className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
+      />
+
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-transparent"></div>
 
-      {/* Conteúdo com animação ao entrar na viewport */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -34,5 +28,3 @@ function Hero() {
     </section>
   );
 }
-
-export default Hero;
