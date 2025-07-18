@@ -27,9 +27,7 @@ export default function Hero() {
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           Bem-vindo ao Inkverse Studio
         </h1>
-        <p className="text-lg md:text-2xl">
-          Arte, tatuagem e criatividade que ganham vida.
-        </p>
+        
       </motion.div>
     </section>
   );
