@@ -8,17 +8,17 @@ import Artists from './components/Artists';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollToHash from './components/ScrollToHash';
 
-import OldSchoolPage from './pages/OldSchoolPage';
-import MinimalistaPage from './pages/MinimalistaPage';
-import RealismoPage from './pages/RealismoPage';
-import AquarelaPage from './pages/AquarelaPage';
+import StylePage from './pages/StylePage';
+import NotFound from './pages/NotFound';
 
 import './index.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToHash />
       <Helmet>
         <title>Inkverse Studio | Estúdio Criativo de Tatuagem e Design</title>
         <meta
@@ -50,10 +50,9 @@ function App() {
                 </>
               }
             />
-            <Route path="/oldschool" element={<OldSchoolPage />} />
-            <Route path="/minimalista" element={<MinimalistaPage />} />
-            <Route path="/realismo" element={<RealismoPage />} />
-            <Route path="/aquarela" element={<AquarelaPage />} />
+            {/* /oldschool, /minimalista, /realismo, /aquarela — ver src/data/styles.js */}
+            <Route path="/:slug" element={<StylePage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 

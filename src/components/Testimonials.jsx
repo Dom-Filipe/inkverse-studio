@@ -26,11 +26,12 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Galeria de fotos */}
           <div className="grid grid-cols-2 gap-4">
-            {["studio1.jpg", "studio2.jpg", "studio3.jpg", "studio4.jpg"].map((img, index) => (
+            {["studio1.webp", "studio2.webp", "studio3.webp", "studio4.webp"].map((img, index) => (
               <motion.img
                 key={img}
                 src={`/images/${img}`}
                 alt={`Foto do Estúdio ${index + 1}`}
+                loading="lazy"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
                 variants={imageVariants}
                 initial="hidden"

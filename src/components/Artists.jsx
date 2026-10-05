@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const artists = [
-  { name: "Ana Silva", desc: "Especialista em aquarela.", image: "/images/ddd.jpg" },
-  { name: "Carlos Tattoo", desc: "Old school e tradicional.", image: "/images/sss.jpg" },
-  { name: "Julia Ink", desc: "Minimalismo e fineline.", image: "/images/fff.png" },
+  { name: "Ana Silva", desc: "Especialista em aquarela.", image: "/images/ddd.webp" },
+  { name: "Carlos Tattoo", desc: "Old school e tradicional.", image: "/images/sss.webp" },
+  { name: "Julia Ink", desc: "Minimalismo e fineline.", image: "/images/fff.webp" },
 ];
 
 export default function Artists() {
@@ -30,6 +30,7 @@ export default function Artists() {
               <img
                 src={artist.image}
                 alt={`Tatuador: ${artist.name}`}
+                loading="lazy"
                 className="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow"
               />
               <h3 className="text-xl font-bold mb-2">{artist.name}</h3>
