@@ -1,5 +1,6 @@
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { site } from "../config/site";
 
 export default function Contact() {
   return (
@@ -17,9 +18,10 @@ export default function Contact() {
           {/* Redes Sociais */}
           <div className="flex space-x-8 text-4xl">
             <motion.a
-              href="https://wa.me/5511999999999"
+              href={site.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Falar no WhatsApp"
               whileHover={{ scale: 1.2 }}
               className="hover:text-green-400 transition"
             >
@@ -27,9 +29,10 @@ export default function Contact() {
             </motion.a>
 
             <motion.a
-              href="https://instagram.com/seu_instagram"
+              href={site.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram do estúdio"
               whileHover={{ scale: 1.2 }}
               className="hover:text-pink-500 transition"
             >
@@ -39,13 +42,13 @@ export default function Contact() {
 
           {/* Endereço */}
           <div className="text-center text-lg leading-relaxed max-w-md">
-            <p>📍 Rua Hebert Silva, nº 29</p>
-            <p>Praia Grande - SP</p>
+            <p>📍 {site.address.street}</p>
+            <p>{site.address.city}</p>
           </div>
 
           {/* Call to Action */}
           <motion.a
-            href="https://wa.me/5511999999999"
+            href={site.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

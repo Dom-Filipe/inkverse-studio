@@ -1,8 +1,28 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+function renderAt(path) {
+  window.history.pushState({}, '', path);
+  return render(<App />);
+}
+
+test('renderiza a página inicial', () => {
+  renderAt('/');
+  expect(screen.getByText(/Bem-vindo ao Inkverse Studio/i)).toBeInTheDocument();
+});
+
+test.each([
+  ['/oldschool', 'Old School'],
+  ['/minimalista', 'Minimalista'],
+  ['/realismo', 'Realismo'],
+  ['/aquarela', 'Aquarela'],
+])('a página %s mostra o estilo %s', (path, name) => {
+  renderAt(path);
+  expect(screen.getByRole('heading', { level: 1, name })).toBeInTheDocument();
+  expect(screen.getAllByRole('button', { name: /Ampliar foto/i }).length).toBeGreaterThan(0);
+});
+
+test('rota inexistente mostra a página 404', () => {
+  renderAt('/nao-existe');
+  expect(screen.getByText(/Página não encontrada/i)).toBeInTheDocument();
 });
