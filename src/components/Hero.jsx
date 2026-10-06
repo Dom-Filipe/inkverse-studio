@@ -6,20 +6,12 @@ const highlights = ["Artistas especializados", "Material 100% descartável", "Pr
 
 export default function Hero() {
   return (
-    <section className="relative flex items-center justify-center px-4 pt-52 pb-16 md:pt-24 min-h-screen overflow-hidden text-white">
-      {/* Vídeo de fundo */}
-      <video
-        src="/assets/001.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
+    <section className="relative flex items-center justify-center px-4 pt-52 pb-16 md:pt-24 min-h-screen overflow-hidden text-white bg-black">
+      {/* Fundo escuro com brilho vermelho discreto */}
+      <div
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(220,38,38,0.25)_0%,rgba(0,0,0,0)_60%)]"
       />
-
-      {/* Camada escura para contraste */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
 
       {/* Conteúdo com animação */}
       <motion.div
