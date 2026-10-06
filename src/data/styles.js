@@ -4,10 +4,10 @@ export const styles = [
   {
     slug: 'oldschool',
     name: 'Old School',
-    cover: '/images/oldschool.webp',
+    cover: '/images/oldschool-rosa.webp',
     description:
       'Traços grossos, cores sólidas e símbolos clássicos: âncoras, rosas, andorinhas e caveiras. O estilo tradicional que nunca sai de moda.',
-    gallery: ['/images/oldschool.webp', '/images/oldschool-2.webp'],
+    gallery: ['/images/oldschool-rosa.webp', '/images/oldschool.webp', '/images/oldschool-2.webp'],
   },
   {
     slug: 'minimalista',
@@ -20,17 +20,17 @@ export const styles = [
   {
     slug: 'realismo',
     name: 'Realismo',
-    cover: '/images/realismo.webp',
+    cover: '/images/realismo-lobo.webp',
     description:
       'Retratos e cenas com riqueza de detalhes, sombras e profundidade que parecem fotografias na pele.',
-    gallery: ['/images/realismo.webp', '/images/realismo-2.webp'],
+    gallery: ['/images/realismo-lobo.webp', '/images/realismo-2.webp', '/images/realismo.webp'],
   },
   {
     slug: 'aquarela',
     name: 'Aquarela',
-    cover: '/images/aquarela.webp',
+    cover: '/images/aquarela-braco.webp',
     description:
       'Cores vibrantes, manchas e degradês que imitam a pintura em aquarela, trazendo leveza e movimento.',
-    gallery: ['/images/aquarela.webp'],
+    gallery: ['/images/aquarela-braco.webp', '/images/aquarela.webp'],
   },
 ];
