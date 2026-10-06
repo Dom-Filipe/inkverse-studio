@@ -8,7 +8,8 @@ function renderAt(path) {
 
 test('renderiza a página inicial', () => {
   renderAt('/');
-  expect(screen.getByText(/Bem-vindo ao Inkverse Studio/i)).toBeInTheDocument();
+  expect(screen.getByRole('heading', { level: 1, name: /Arte que transcende a pele/i })).toBeInTheDocument();
+  expect(screen.getAllByRole('link', { name: /Agende sua sessão/i })[0]).toHaveAttribute('href', '/#contato');
 });
 
 test.each([
