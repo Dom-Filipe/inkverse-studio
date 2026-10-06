@@ -12,10 +12,18 @@ export const styles = [
   {
     slug: 'minimalista',
     name: 'Minimalista',
-    cover: '/images/minimalista.webp',
+    cover: '/images/minimalista-pato.webp',
     description:
       'Linhas finas, formas simples e muito significado. Ideal para quem busca uma tatuagem delicada e discreta.',
-    gallery: ['/images/minimalista.webp', '/images/minimalista-2.webp'],
+    gallery: [
+      '/images/minimalista-pato.webp',
+      '/images/minimalista-fantasma.webp',
+      '/images/minimalista-kuzco.webp',
+      '/images/minimalista-cadeira.webp',
+      '/images/minimalista-carta.webp',
+      '/images/minimalista.webp',
+      '/images/minimalista-2.webp',
+    ],
   },
   {
     slug: 'realismo',
