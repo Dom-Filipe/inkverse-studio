@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 
+// `position` ajusta o enquadramento da foto no card (CSS object-position).
 const artists = [
-  { name: "Ana Silva", desc: "Especialista em aquarela.", image: "/images/ddd.webp" },
-  { name: "Carlos Tattoo", desc: "Old school e tradicional.", image: "/images/sss.webp" },
-  { name: "Julia Ink", desc: "Minimalismo e fineline.", image: "/images/fff.webp" },
+  { name: "Julia Ink", desc: "Minimalismo e fineline.", image: "/images/artista-julia.webp", position: "50% 30%" },
+  { name: "Rafael Costa", desc: "Especialista em aquarela.", image: "/images/artista-rafael.webp", position: "50% 45%" },
+  { name: "Carlos Tattoo", desc: "Old school e tradicional.", image: "/images/artista-carlos.webp", position: "30% 60%" },
 ];
 
 export default function Artists() {
@@ -17,7 +18,7 @@ export default function Artists() {
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">Nossos Artistas</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {artists.map((artist, index) => (
             <motion.div
               key={artist.name}
@@ -25,16 +26,19 @@ export default function Artists() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="text-center p-4 bg-white rounded-lg shadow-lg hover:shadow-xl transition"
+              className="text-center bg-white rounded-lg shadow-lg hover:shadow-xl transition overflow-hidden"
             >
               <img
                 src={artist.image}
                 alt={`Tatuador: ${artist.name}`}
                 loading="lazy"
-                className="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow"
+                className="w-full aspect-[4/5] object-cover"
+                style={{ objectPosition: artist.position }}
               />
-              <h3 className="text-xl font-bold mb-2">{artist.name}</h3>
-              <p className="text-gray-700">{artist.desc}</p>
+              <div className="p-5">
+                <h3 className="text-xl font-bold mb-2">{artist.name}</h3>
+                <p className="text-gray-700">{artist.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
